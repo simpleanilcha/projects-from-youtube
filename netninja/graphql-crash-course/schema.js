@@ -4,7 +4,7 @@ export const typeDefs = `#graphql
   type Game {
     id: ID!
     title: String!
-    paltform: [String!]!
+    platform: [String!]!
   }
   type Review {
     id: ID!
