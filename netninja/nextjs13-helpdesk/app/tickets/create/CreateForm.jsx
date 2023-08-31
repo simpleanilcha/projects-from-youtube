@@ -4,13 +4,14 @@ import { useRouter } from "next/navigation"
 import { useState } from "react"
 
 export default function CreateForm() {
+  const router = useRouter()
+
   const [title, setTitle] = useState('')
   const [body, setBody] = useState('')
   const [priority, setPriority] = useState('low')
   const [isLoading, setIsLoading] = useState(false)
 
   const handleSubmit = async (e) => {
-    s
     e.preventDefault()
     setIsLoading(true)
 
@@ -26,6 +27,7 @@ export default function CreateForm() {
       router.refresh()
       router.push('/tickets')
     }
+
   }
 
   return (
